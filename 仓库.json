@@ -1,0 +1,29 @@
+{
+  "urls": [
+    {
+      "url": "https://ghproxy.com/https://raw.githubusercontent.com/canxueguhong/box/main/he.json
+",
+      "name": "合集"
+    },
+   {
+      "url": "https://ghproxy.com/https://raw.githubusercontent.com/canxueguhong/box/main/点播.json",
+      "name": "点播"
+    },{
+      "url": "https://ghproxy.com/https://raw.githubusercontent.com/canxueguhong/box/main/广告.json",
+      "name": "含广告"
+    },{
+      "url": "https://ghproxy.com/https://raw.githubusercontent.com/canxueguhong/box/main/网盘杂项.json",
+      "name": "网盘杂项|音乐体育直播"
+    },{
+      "url": "http://weixine.link:33/ysc.json",
+      "name": "运输车"
+    },{
+			"url": "http://cf.weixine.net/ysc.json",
+			"name": "运输车CF加速"
+		},
+		{
+			"url": "https://weixine.net/ysc.json",
+			"name": "运输车主线"
+		}
+  ]
+}
