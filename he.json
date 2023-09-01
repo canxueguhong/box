@@ -888,8 +888,8 @@
 {"key":"88看球","name":"⚽88看球","type":3,"api":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/apiv43drpy2.min.js","searchable": 1,"quickSearch":0,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/88kanqiu.js"},
 {"key":"drpy_js_310直播","name":"体育 | 310直播[js]","type":3,"api":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/apiv131drpy2.min.js","ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/310直播.js"},
 {"key":"csp_Yj1211","name":"📽️在线直播","type":3,"api":"csp_Yj1211","searchable": 1,"quickSearch":0,"filterable":1},
-{"key":"drpy_js_斗鱼直播","name":"直播 | 斗鱼[js]","type":3,"api":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/apiv131drpy2.min.js","ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/斗鱼直播.js"}
-		
+{"key":"drpy_js_斗鱼直播","name":"直播 | 斗鱼[js]","type":3,"api":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/apiv131drpy2.min.js","ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/斗鱼直播.js"},
+{"key":"虎牙直播","name":"🐯虎牙直播","type":3,"api":"./lib/apiv43drpy2.min.js","searchable":0,"quickSearch":0,"filterable":1,"ext":"./lib/huyazhibo.js"},
 ],
 "parses": [{
     "name": "Json并发",
