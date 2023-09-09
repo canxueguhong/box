@@ -432,7 +432,112 @@
  
 {"key":"drpy_js_厂长资源","name":"影视 | 厂长资源[js]","type":3,"api":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/apiv131drpy2.min.js","ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/厂长资源.js"},
  
+ {"key":"鸭鸭","name":"🦆鸭鸭┃影视","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://yayayaaapp.ynf.icu/api.php/app/"},
  
+{"key":"drpy_js_007","name":"🎫007电影","type":3,"api":"./drpy.min.js","ext":"http://52bsj.vip:81/api/v3/file/get/155350/007%E5%BD%B1%E8%A7%86.js?sign=EkntLloZ5Uy72KNgioKclay4YDRZtPXWpw2hCdQApuE%3D%3A0"},
+ {"key":"drpy_js_子子影视","name":"☁️子子影视","type":3,"api":"./drpy.min.js","ext":"./js/子子影视.js"},       
+{"key":"drpy_js_六度TV","name":"六度TV[js]","type":3,"api":"./drpy2.min.js","ext":"./js/六度TV.js"},
+{"key":"drpy_js_新片场","name":"新片场[js]","type":3,"api":"./drpy2.min.js","ext":"./js/新片场.js"},
+{"key":"drpy_js_柒之社","name":"⑦柒之社[js]","type":3,"api":"./drpy2.min.js","ext":"./js/柒之社.js"},
+{
+            "key": "淘剧",
+            "name": "淘剧|影视",
+            "type": 3,
+            "api": "csp_XBPQ",
+            "ext": {
+                "分类url": "https://www.gzwdlyl.com/vodshow/{cateId}-{area}-------{catePg}---{year}.html",
+                "分类": "电影$1#电视剧$2#综艺$3#动漫$4"
+            }
+        }, {
+            "key": "小狗",
+            "name": "小狗影院┃追剧",
+            "type": 3,
+            "api": "csp_XBPQ",
+            "ext": {
+                "分类url": "https://pupvod.com/pupshow/{cateId}{area}ppppppp{catePg}ppp{year}.html",
+                "分类": "电影$moviep#连续剧$TVshowp#综艺$Varietyp#动漫$Animep#体育赛事$tiyup#小狗资讯$newsp#国创$cnp#番剧$Fanjup"
+            }
+        },	
+	{
+			"key": "星辰",
+			"name": "⭐星辰┃BPQ",
+			"type": 3,
+			"api": "csp_XBPQ",
+			"jar": "./lib/2.jar;md5;6e12873c628020196fe9400d1ef51f1c",
+			"playerType": "1",
+			"ext": "./lib/星辰.json"
+		},
+{"key":"csp_xpath_yinfans","name":"💥音范丝4K","type":3,"api":"csp_XPath","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/音范丝.json"},
+{"key":"狐狸","name":"🦊狐狸蓝光","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://www.kuin.one/api.php/app/"},
+{"key":"迪迪","name":"迪迪┃App","api":"csp_AppYsV2","type":3,"searchable":1,"quickSearch":1,"changeable":1,"ext":"https://api123.adys.app/xgapp.php/v3/"},
+{"key":"哈喽","name":"✌哈喽┃App","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"changeable":1,"ext":"http://guan.yy365.vip/api.php/app/"},
+{"key":"南瓜","name":"🎃南瓜┃APP","type":3,"searchable":1,"quickSearch":1,"api":"./drpy2.min.js","ext":"./js/南瓜.js","changeable":0},		
+{"key":"北极狐", "name": "🚛北极狐┃4K", "type": 3, "api": "csp_AppYsV2", "searchable": 1, "quickSearch": 1, "filterable": 1, "playerType": "2", "ext": "https://www.kuin.one/api.php/app/"},
+{"key": "看看剧","name": "🚛看看剧", "type": 3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/kankanju.json"},
+{"key":"速映影视","name":"🚛速映┃2K","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/suying.json"},
+{"key":"爱迪影视","name":"🚛爱迪影视","type": 3,"playerType":"2","api": "csp_AppYsV2","ext": "https://api123.adys.app/xgapp.php/v3/"},
+{"key":"策驰影院","name":"🚛策驰影院","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/cechi.json"},
+{"key":"迷你库","name":"迷你库","type":3,"api":"csp_AppYsV2","searchable":1,"quickSearch":1,"filterable":1,"ext":"http://www.miniku.cc/xgapp.php/v1/"},
+{"key":"csp_xpath_tvb","name":"🌩万能影院","type":3,"api":"csp_XPath","searchable":1,"quickSearch":1,"filterable":0,"ext":"./lib/wn.json"},
+{"key":"圣城影视","name":"🚛圣城┃4K","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"./lib/sc1080.json"},
+{"key":"两个BT","name":"🚛两个BT","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable": 1,"ext":"./lib/bttwo.json"},
+{"key":"csp_Anime1","name":"动漫","type":3,"api":"csp_Anime1","searchable":1,"quickSearch":1,"filterable":1},
+{"key":"csp_Dm84","name":"🚌动漫巴士","type":3,"api":"csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/libDm84.json"},
+{"key":"csp_Ying","name":"💮樱花┃动漫","type":3,"api":"csp_Ying","searchable":1,"quickSearch":1,"changeable":1},
+{
+            "key": "csp_菲克",
+            "name": "🍾菲克影视",
+            "type": 3,"playerType":2,
+            "api": "csp_XBPQ",
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 1,
+            "ext": "https://jihulab.com/canxueguhong/box/-/raw/main/lib/菲克.json"
+        },
+  { "key": "小鹿",
+            "name": "🦒小鹿高清",
+            "type": 3,"playerType":2,
+            "api": "csp_XBPQ",
+            "ext": {
+            "分类":"电影$1#电视剧$31#动漫$4#综艺$3" ,
+            "分类url": "http://www.xiaoluys.me/vodshow/{cateId}-{area}-{by}------{catePg}---{year}.html"}},
+{"key":"csp_ggun","name":"🌵光棍高清","type":3,"playerType":2,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/光棍影视.json"},
+{"key":"csp_miai","name":"🌾米爱蓝光","type":3,"playerType":2,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/米爱影视.json"},
+
+ {"key": "csp_bt","name": "😢鼻涕影视","type": 3,"playerType":2,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://jihulab.com/canxueguhong/box/-/raw/main/lib/鼻涕影视.json"},
+ {"key":"XBPQsj","name":"🔥┃新视觉┃","type":3,"playerType":2,"api":"csp_XBPQ","filterable":1,"quickSearch":1,"searchable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/6080.json"},            
+ {
+      "key": "暴风采集",
+      "name": "🍃┃暴风┃高清",
+      "type": 1,"playerType":2,
+      "api": "https://app.bfzyapi.com/api.php/provide/vod/",
+      "playUrl": "",
+      "categories": [
+        "国产剧",
+        "国产动漫",
+        "动作片",
+        "科幻片",
+        "剧情片",
+        "喜剧片",
+        "爱情片",
+        "恐怖片",
+        "战争片",
+        "香港剧",
+        "台湾剧",
+        "日本剧",
+        "欧美剧",
+        "泰国剧",
+        "日本动漫",
+        "综艺频道",
+        "大陆综艺",
+        "港台综艺", 
+        "日本综艺",
+        "新马泰综艺",
+        "纪录片"
+        
+      ]
+    },
+{"key":"csp_58","name":"🏵️58动漫","type":3,"playerType":2,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/58动漫.json"},
 {"key":"drpy_js_去看吧","name":"动漫 | 去看吧[js]","type":3,"api":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/apiv131drpy2.min.js","ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/去看吧.js"},
  
 {"key":"兔小贝","name":"🐰兔小贝","type":3,"api":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/apiv43drpy2.min.js","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/tuxiaobei.js"},
