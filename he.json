@@ -548,8 +548,19 @@
 		
 		
 //广告
-
-		{
+{
+      "key": "csp_追剧达人",
+      "name": "📽️达人┃BPQ",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "ext": {
+        "站名":"追剧达人",
+        "主页url":"https://www.teknowebs.com/",
+        "分类":"电影$1#电视剧$2#综艺$3#动漫$4#豆瓣电影Top250$42",
+        "分类url":"https://www.teknowebs.com/tevodshow/{cateId}-{area}-------{catePg}---{year}.html"
+      }
+    },
+	{
 			"key": "看看",
 			"name": "广告 看看┃BPQ",
 			"type": 3,
