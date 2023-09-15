@@ -505,7 +505,19 @@
 {"key":"csp_miai","name":"🌾米爱蓝光","type":3,"playerType":2,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/米爱影视.json"},
 
  {"key": "csp_bt","name": "😢鼻涕影视","type": 3,"playerType":2,"api": "csp_XBPQ","searchable": 1,"quickSearch": 1,"filterable": 1,"ext": "https://jihulab.com/canxueguhong/box/-/raw/main/lib/鼻涕影视.json"},
- {"key":"XBPQsj","name":"🔥┃新视觉┃","type":3,"playerType":2,"api":"csp_XBPQ","filterable":1,"quickSearch":1,"searchable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/6080.json"},            
+ {"key":"XBPQsj","name":"🔥┃新视觉┃","type":3,"playerType":2,"api":"csp_XBPQ","filterable":1,"quickSearch":1,"searchable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/6080.json"},    
+{
+      "key": "csp_追剧达人",
+      "name": "📽️达人┃BPQ",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "ext": {
+        "站名":"追剧达人",
+        "主页url":"https://www.teknowebs.com/",
+        "分类":"电影$1#电视剧$2#综艺$3#动漫$4#豆瓣电影Top250$42",
+        "分类url":"https://www.teknowebs.com/tevodshow/{cateId}-{area}-------{catePg}---{year}.html"
+      }
+    },        
  {
       "key": "暴风采集",
       "name": "🍃┃暴风┃高清",
