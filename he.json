@@ -915,6 +915,18 @@
       "quickSearch": 1,
       "filterable": 1
     },
+{
+      "key": "yc",
+      "name": "宇宙4K",
+      "type": 3,
+      "playerType": 1,
+      "api": "csp_Hdhive",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "http://127.0.0.1:9978/file/tvfan/token.txt",
+      "jar": "http://101.200.184.252/神秘的宇宙哥哥"
+    },
 {"key":"csp_AList","name":"❤️🅰AList网盘","type":3,"api":"csp_AList","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{
         "drives": [
              {"name":"七米蓝","server":"https://al.chirmyram.com/"},
