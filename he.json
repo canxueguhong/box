@@ -32,7 +32,8 @@
       "ext": "https://jihulab.com/canxueguhong/box/-/raw/main/lib/360影视.js"
     },
 {"key":"drpy_js_我的哔哩","name":"B站 | 合集[js]","type":3,"api":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/apiv131drpy2.min.js","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/我的哔哩.js"},
-
+{"key":"蜗牛","name":"📬蜗牛","type":1,"searchable": 1,
+            "quickSearch": 1,"filterable":1,"api":"https://v.wuxivlog.cn/api.php/provide/vod"},
 {"key":"csp_XYQHikerlg4k","name":"💋云盘4k","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/json/4KHDR.json","jar":"https://jihulab.com/canxueguhong/box/-/raw/main/jars/csp_XYQHikerAL_玩偶哥哥.jar"},
 {"key":"csp_XYQHiker4klg","name":"💅🏻原盘4k","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/json/中国蓝光网.json","jar":"https://jihulab.com/canxueguhong/box/-/raw/main/jars/csp_XYQHikerAL_玩偶哥哥.jar"},
 
@@ -560,6 +561,7 @@
         "分类url":"https://www.teknowebs.com/tevodshow/{cateId}-{area}-------{catePg}---{year}.html"
       }
     },
+{"key":"SY","name":"速影TV","type":3,"api":"csp_XBPQ","searchable":1,"quickSearch":1,"filterable":1,"ext":{"数组":"class=\"col-md-6 col-sm-4 col-xs-3\"&&</li","图片":"imgtag=\"&&\"","搜索图片":"imgtag=\"&&\"","链接":"href=\"&&\"","标题":"title=\"&&\"","分类url":"https://xn--k5d-suyingtvcom-lc40a84t7o9i3urako0c.suyingok.com/movie-type-id-{cateId}-pg-{catePg}.html","分类":"电影$1#电视剧$2#综艺$3#动漫$4动作$5#喜剧$6#科幻$8#恐怖$9#战争$11#爱情$7#剧情$10#纪录$20#国产$12#欧美$15#港剧$18#台剧$19#海外$21#韩剧$17#日剧$16#理伦$22"}},
 	{
 			"key": "看看",
 			"name": "广告 看看┃BPQ",
@@ -1034,6 +1036,11 @@
     "url": "Sequence"
 },
 {      "name": "解析聚合",      "type": 3,      "url": "Demo"    },
+{
+            "name": "1",
+            "type": 1,
+            "url": "http://jx.wogg.link:63/jiexi/饭特析.php?url="
+        },
 {"name": "超清1","type": 1,"url": "http://27.124.4.42:4567/jhjson/ceshi.php?url="},
 {
     		"name": "精选1",
