@@ -103,6 +103,8 @@
                 "奇幻片"
             ]
         }, 
+{"key":"蜗牛","name":"📬蜗牛","type":1,"searchable": 1,
+            "quickSearch": 1,"api":"https://v.wuxivlog.cn/api.php/provide/vod"},
   {
             "key": "zy_天堂资源",
             "name": "接口┃天堂资源",
@@ -1396,6 +1398,11 @@
     "url": "Sequence"
 },
 {      "name": "解析聚合",      "type": 3,      "url": "Demo"    },
+{
+            "name": "1",
+            "type": 1,
+            "url": "http://jx.wogg.link:63/jiexi/饭特析.php?url="
+        },
 {"name": "超清1","type": 1,"url": "http://27.124.4.42:4567/jhjson/ceshi.php?url="},
 {
     		"name": "精选1",
