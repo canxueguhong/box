@@ -32,8 +32,7 @@
       "ext": "https://jihulab.com/canxueguhong/box/-/raw/main/lib/360影视.js"
     },
 {"key":"drpy_js_我的哔哩","name":"B站 | 合集[js]","type":3,"api":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/apiv131drpy2.min.js","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/lib/我的哔哩.js"},
-{"key":"蜗牛","name":"📬蜗牛","type":1,"searchable": 1,
-            "quickSearch": 1,"filterable":1,"api":"https://v.wuxivlog.cn/api.php/provide/vod"},
+{"key": "影巢","name": " 🐦影巢┃4k","type": 3,"api": "csp_Hdhive","playerType":1,"searchable": 1,"quickSearch": 1,"filterable": 1,"changeable":1,"ext": "https://jihulab.com/0004/0/-/raw/main/tk.php","jar": "https://jihulab.com/canxueguhong/box/-/raw/main/jars/app.jar"},
 {"key":"csp_XYQHikerlg4k","name":"💋云盘4k","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/json/4KHDR.json","jar":"https://jihulab.com/canxueguhong/box/-/raw/main/jars/csp_XYQHikerAL_玩偶哥哥.jar"},
 {"key":"csp_XYQHiker4klg","name":"💅🏻原盘4k","type":3,"api":"csp_XYQHiker","searchable":1,"quickSearch":1,"filterable":1,"ext":"https://jihulab.com/canxueguhong/box/-/raw/main/json/中国蓝光网.json","jar":"https://jihulab.com/canxueguhong/box/-/raw/main/jars/csp_XYQHikerAL_玩偶哥哥.jar"},
 
