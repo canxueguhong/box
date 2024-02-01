@@ -1,0 +1,83 @@
+{
+  "vodPic": "https://inews.gtimg.com/newsapp_bt/0/13263837859/1000",
+  "classes": [
+{
+      "type_name": "小猪佩奇",
+      "type_id": "/动漫/儿童/小猪佩奇 1~8季",
+      "type_flag": "1"
+    },{
+      "type_name": "宝贝jojo",
+      "type_id": "/动漫/儿童/超级JOJO",
+      "type_flag": "1"
+    },{
+      "type_name": "宝宝巴士",
+      "type_id": "/动漫/儿童/宝宝巴士",
+      "type_flag": "1"
+    },{
+      "type_name": "字有道理",
+      "type_id": "/动漫/儿童/中华经典 - 字有道理/字有道理 第一季/完结版本大集合",
+      "type_flag": "1"
+    },{
+      "type_name": "唐诗三百首",
+      "type_id": "/动漫/儿童/中华经典 - 唐诗三百首 微电影",
+      "type_flag": "1"
+    },{
+      "type_name": "安徒生童话",
+      "type_id": "/动漫/儿童/安徒生童话动画全集",
+      "type_flag": "1"
+    },{
+      "type_name": "寓言故事",
+      "type_id": "/动漫/儿童/寓言故事",
+      "type_flag": "1"
+    },{
+      "type_name": "小猪佩奇英语",
+      "type_id": "/动漫/儿童/小猪佩奇英语课堂",
+      "type_flag": "1"
+    },{
+      "type_name": "巧虎系列",
+      "type_id": "/动漫/儿童/巧虎全集",
+      "type_flag": "1"
+    },{
+      "type_name": "巴布工程师",
+      "type_id": "/动漫/儿童/巴布工程师",
+      "type_flag": "1"
+    },{
+      "type_name": "米卡成长",
+      "type_id": "/动漫/儿童/米卡成长天地",
+      "type_flag": "1"
+    },{
+      "type_name": "米卡早教",
+      "type_id": "/动漫/儿童/米卡早教",
+      "type_flag": "1"
+    },{
+      "type_name": "萌鸡小学堂",
+      "type_id": "/动漫/儿童/萌鸡小学堂",
+      "type_flag": "1"
+    },{
+      "type_name": "知知鸟",
+      "type_id": "/动漫/儿童/趣趣知知鸟",
+      "type_flag": "1"
+    },{
+      "type_name": "米奇妙妙屋",
+      "type_id": "/动漫/儿童/米奇妙妙屋 1-5季",
+      "type_flag": "1"
+    },{
+      "type_name": "舞蹈",
+      "type_id": "/动漫/儿童/幼儿园儿歌舞蹈",
+      "type_flag": "1"
+    },{
+      "type_name": "绘本",
+      "type_id": "/动漫/儿童/获奖绘本视频-148个",
+      "type_flag": "1"
+    },{
+      "type_name": "凯叔教育",
+      "type_id": "/动漫/儿童/凯叔讲故事",
+      "type_flag": "1"
+    },{
+      "type_name": "纪录片",
+      "type_id": "/纪录片",
+      "type_flag": "1"
+    }
+  ],"site":{"name":"雅雅","server":"http://182.43.87.221:5678"},
+  "homeContent":"/动漫/儿童"
+}
