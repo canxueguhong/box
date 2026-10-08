@@ -29,7 +29,7 @@ jobs:
         run: |
           git config --global user.name "AutoSyncBot"
           git config --global user.email "bot@example.com"
-          git remote add gitee git@gitee.com:canxue/tvbox-sync.git
+          git remote add gitee git@gitee.com:canxue90/tvbox-sync.git
           git add config.json
           git commit -m "Auto update tvbox config $(date)" || true
           git push gitee HEAD:master --force
