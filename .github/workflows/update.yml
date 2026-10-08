@@ -23,7 +23,7 @@ jobs:
         run: |
           git config --global user.name "AutoSyncBot"
           git config --global user.email "bot@example.com"
-          git remote add gitee https://${{ secrets.GITEE_TOKEN }}@gitee.com/canxue90/automatic-update.git
+          git remote add gitee https://${{ secrets.GITEE_TOKEN }}@gitee.com/canxue/自动更新.git
           git add config.json
           git commit -m "Auto update tvbox config $(date)" || true
           git push gitee master --force
