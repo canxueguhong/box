@@ -1,8 +1,8 @@
 name: Sync & Replace TVBox Config
 on:
-  workflow_dispatch: # 支持手动点按钮运行测试
+  workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *" # 每6小时自动执行，UTC时间（国内=UTC+8）
+    - cron: "0 */6 * * *"
 
 jobs:
   build:
@@ -26,4 +26,4 @@ jobs:
           git remote add gitee https://${{ secrets.GITEE_TOKEN }}@gitee.com/canxue/自动更新.git
           git add config.json
           git commit -m "Auto update tvbox config $(date)" || true
-          git push gitee master --force
+          git push gitee HEAD:master --force
