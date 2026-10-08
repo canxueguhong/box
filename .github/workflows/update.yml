@@ -8,33 +8,32 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 不再需要拉取github仓库，直接操作Gitee仓库
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 关闭浅克隆，修复 shallow update not allowed
+
+      - name: Fetch upstream config
+        run: |
+          curl -L "https://tvbox.xiaoy93.ccwu.cc" -o config.json
+
+      - name: Replace raw links with ghproxy mirror
+        run: |
+          sed -i 's|https://raw.githubusercontent.com|https://ghfast.top/https://raw.githubusercontent.com|g' config.json
+
+      # 加载SSH私钥
       - name: Setup SSH Agent
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.GITEE_SSH_PRIVATE_KEY }}
 
-      - name: Prepare known_hosts
+      - name: Git Push via SSH
         run: |
+          git config --global user.name "AutoSyncBot"
+          git config --global user.email "bot@example.com"
           mkdir -p ~/.ssh
           ssh-keyscan gitee.com >> ~/.ssh/known_hosts
-
-      - name: Clone Gitee repo
-        run: |
-          git clone git@gitee.com:canxue90/tvbox-sync.git repo
-          cd repo
-
-      - name: Fetch upstream config & replace link
-        run: |
-          cd repo
-          curl -L "https://tvbox.xiaoy93.ccwu.cc" -o config.json
-          sed -i 's|https://raw.githubusercontent.com|https://ghfast.top/https://raw.githubusercontent.com|g' config.json
-
-      - name: Git Push to Gitee
-        run: |
-          cd repo
-          git config user.name "AutoSyncBot"
-          git config user.email "bot@example.com"
+          git remote add gitee git@gitee.com:canxue90/tvbox-sync.git
           git add config.json
           git commit -m "Auto update tvbox config $(date)" || true
-          git push origin master --force
+          git push gitee HEAD:master --force # 推送master分支
