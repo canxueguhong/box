@@ -29,6 +29,8 @@ jobs:
         run: |
           git config --global user.name "AutoSyncBot"
           git config --global user.email "bot@example.com"
+          mkdir -p ~/.ssh
+          ssh-keyscan gitee.com >> ~/.ssh/known_hosts
           git remote add gitee git@gitee.com:canxue90/tvbox-sync.git
           git add config.json
           git commit -m "Auto update tvbox config $(date)" || true
