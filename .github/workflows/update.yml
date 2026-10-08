@@ -17,7 +17,7 @@ jobs:
 
       - name: Replace raw links with ghproxy mirror
         run: |
-          sed -i 's|https://raw.githubusercontent.com|https://mirror.ghproxy.com/https://raw.githubusercontent.com|g' config.json
+          sed -i 's|https://raw.githubusercontent.com|https://ghfast.top/https://raw.githubusercontent.com|g' config.json
 
       - name: Setup Gitee Git
         run: |
@@ -27,12 +27,12 @@ jobs:
       - name: Push to Gitee
         uses: ad-m/github-push-action@master
         with:
-          repository: 你的Gitee用户名/你的仓库名
+          repository: canxue90/automatic-update
           branch: master
           directory: ./
           github_token: ${{ secrets.GITEE_TOKEN }}
           git_command: |
-            git remote add gitee https://${{ secrets.GITEE_TOKEN }}@gitee.com/你的Gitee用户名/你的仓库名.git
+            git remote add gitee https://${{ secrets.GITEE_TOKEN }}@gitee.com/canxue90/automatic-update.git
             git add config.json
             git commit -m "Auto update tvbox config $(date)" || true
             git push gitee master --force
