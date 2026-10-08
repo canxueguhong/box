@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 关闭浅克隆，修复 shallow update not allowed
 
       - name: Fetch upstream config
         run: |
@@ -34,4 +36,4 @@ jobs:
           git remote add gitee git@gitee.com:canxue90/tvbox-sync.git
           git add config.json
           git commit -m "Auto update tvbox config $(date)" || true
-          git push gitee HEAD:master --force
+          git push gitee HEAD:master --force # 推送master分支
