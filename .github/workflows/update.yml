@@ -3,21 +3,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 */6 * * *"
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch upstream json & replace mirror link
-        run: |
-          curl -L "https://tvbox.xiaoy93.ccwu.cc" -o tvbox.json
-          sed -i 's|https://raw.githubusercontent.com|https://ghfast.top/https://raw.githubusercontent.com|g' tvbox.json
-          cat tvbox.json
-
-      - name: Upload to textdb
-        run: |
-          JSON_ESCAPED=$(jq -R . tvbox.json)
-          echo "Escaped content: $JSON_ESCAPED"
-          BODY=$(jq -n --arg k "${{secrets.TEXTDB_KEY}}" --arg d "$JSON_ESCAPED" '{key:$k,data:$d}')
-          echo "RequestBody: $BODY"
-          curl -v -X POST "https://textdb.online/api" -H "Content-Type: application/json" -d "$BODY"
+      - name: Sync Config
+        run: curl -L "https://tvbox.xiaoy93.ccwu.cc" -o tvbox.json; sed -i 's|https://raw.githubusercontent.com|https://ghfast.top/https://raw.githubusercontent.com|g' tvbox.json; B64=$(base64 -w 0 tvbox.json); curl -X POST https://textdb.online/api -H "Content-Type:application/json" -d "{\"key\":\"${{secrets.TEXTDB_KEY}}\",\"data\":\"$B64\",\"encode\":\"base64\"}"
