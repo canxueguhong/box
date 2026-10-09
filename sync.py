@@ -3,6 +3,7 @@ import os
 
 def main():
     key = os.environ["TEXTDB_KEY"]
+    print("DEBUG key value:", repr(key))
     source_url = "https://tvbox.xiaoy93.ccwu.cc"
 
     resp = requests.get(source_url, timeout=30)
