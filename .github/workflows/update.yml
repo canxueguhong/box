@@ -3,9 +3,23 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 */6 * * *"
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync Config
-        run: curl -L "https://tvbox.xiaoy93.ccwu.cc" -o tvbox.json; sed -i 's|https://raw.githubusercontent.com|https://ghfast.top/https://raw.githubusercontent.com|g' tvbox.json; B64=$(base64 -w 0 tvbox.json); curl -X POST https://textdb.online/api -H "Content-Type:application/json" -d "{\"key\":\"${{secrets.TEXTDB_KEY}}\",\"data\":\"$B64\",\"encode\":\"base64\"}"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install python dependencies
+        run: pip install requests
+
+      - name: Run sync script
+        env:
+          TEXTDB_KEY: ${{ secrets.TEXTDB_KEY }}
+        run: python3 sync.py
