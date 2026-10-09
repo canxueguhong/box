@@ -18,6 +18,6 @@ jobs:
         run: |
           JSON_ESCAPED=$(jq -R . tvbox.json)
           echo "Escaped content: $JSON_ESCAPED"
-          BODY=$(jq -n --arg k "${{ secrets.TEXTDB_KEY }}" --arg d "$JSON_ESCAPED" '{key:$k,data:$d}')
+          BODY=$(jq -n --arg k "${{secrets.TEXTDB_KEY}}" --arg d "$JSON_ESCAPED" '{key:$k,data:$d}')
           echo "RequestBody: $BODY"
           curl -v -X POST "https://textdb.online/api" -H "Content-Type: application/json" -d "$BODY"
