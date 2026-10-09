@@ -8,21 +8,14 @@ def main():
     source_url = "https://tvbox.xiaoy93.ccwu.cc"
     resp = requests.get(source_url, timeout=30)
     resp.encoding = "utf-8"
-    content = resp.text
+    content = content = resp.text.replace("https://raw.githubusercontent.com", "https://ghfast.top/https://raw.githubusercontent.com")
 
-    # 替换镜像
-    content = content.replace(
-        "https://raw.githubusercontent.com",
-        "https://ghfast.top/https://raw.githubusercontent.com"
-    )
+    # 写入本地临时文件
+    with open("/tmp/config.json","w",encoding="utf-8") as f:
+        f.write(content)
 
-    # ⚠️重点：data参数放前面，files放后面，模拟浏览器表单顺序
-    data = {
-        "key": key
-    }
-    files = {
-        "value": ("config.json", content, "text/plain")
-    }
+    data = {"key": key}
+    files = {"value": open("/tmp/config.json","rb")}
 
     res = requests.post("https://textdb.online/update/", data=data, files=files, timeout=60)
     print("textdb返回内容:", res.text)
