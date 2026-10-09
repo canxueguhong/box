@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Fetch original source json
         run: |
-          curl -L "shturl.cc/457iJsYSGYahrxigPyPk" -o source_raw.json
+          curl -L "https://tvbox.xiaoy93.ccwu.cc/" -o source_raw.json
 
       - name: Upload to TextDB
         env:
