@@ -10,19 +10,20 @@ def main():
     resp.raise_for_status()
     content = resp.text
 
+    # 替换raw资源镜像
     content = content.replace(
         "https://raw.githubusercontent.com",
         "https://ghfast.top/https://raw.githubusercontent.com"
     )
 
-    b64 = base64.b64encode(content.encode("utf-8")).decode("utf-8")
-    payload = {
-        "key": key,
-        "data": b64,
-        "encode": "base64"
-    }
-    res = requests.post("https://textdb.online/api", json=payload, timeout=30)
-    print("textdb返回内容：", res.text)
+    # url编码，textdb用url传value，不是base64
+    from urllib.parse import quote
+    value_encoded = quote(content)
+
+    # textdb update接口
+    api_url = f"https://textdb.online/update/?key={key}&value={value_encoded}"
+    res = requests.get(api_url, timeout=30)
+    print("textdb返回内容:", res.text)
 
 if __name__ == "__main__":
     main()
