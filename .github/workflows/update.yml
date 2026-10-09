@@ -16,7 +16,9 @@ jobs:
         env:
           TEXTDB_KEY: ${{ secrets.TEXTDB_KEY }}
         run: |
-          res=$(curl -L -X POST 'https://textdb.online/update/' \
-          -d "key=${TEXTDB_KEY}" \
-          -d "value=@source_raw.json")
+          # 读取文件内容并URL编码
+          CONTENT=$(jq -sR @uri source_raw.json)
+          res=$(curl -L -X POST "https://api.textdb.online/update/" \
+            -d "key=${TEXTDB_KEY}" \
+            -d "value=${CONTENT}")
           echo "textdb响应: $res"
