@@ -12,16 +12,21 @@ jobs:
         run: |
           curl -L "https://tvbox.xiaoy93.ccwu.cc" -o tvbox.json
           sed -i 's|https://raw.githubusercontent.com|https://ghfast.top/https://raw.githubusercontent.com|g' tvbox.json
-
-      - name: Install jq
-        run: sudo apt install jq -y
+          cat tvbox.json # 打印源内容，确认拉取成功
 
       - name: Upload to textdb.online
         run: |
           JSON_CONTENT=$(jq -R . tvbox.json)
-          curl -X POST "https://textdb.online/api" \
+          echo "准备上传内容：$JSON_CONTENT"
+          RESP=$(curl -w "\n%{http_code}" -X POST "https://textdb.online/api" \
             -H "Content-Type: application/json" \
-            -d '{
-              "key": "${{ secrets.TEXTDB_KEY }}",
-              "data": ${JSON_CONTENT}
-            }'
+            -d "{
+              \"key\": \"${{ secrets.TEXTDB_KEY }}\",
+              \"data\": $JSON_CONTENT
+            }")
+          echo "$RESP"
+          HTTP_CODE=$(echo "$RESP" | tail -n1)
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "接口请求失败，http code: $HTTP_CODE"
+            exit 1
+          fi
