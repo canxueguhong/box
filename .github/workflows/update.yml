@@ -1,8 +1,8 @@
 name: Copy tvbox source to textdb
 on:
-  workflow_dispatch:   # 支持手动点按钮立即跑
+  workflow_dispatch:   # 手动运行
   schedule:
-    - cron: "0 0 * * *" # UTC时间，每天0点执行（对应国内早8点）
+    - cron: "0 0 * * *" # UTC每天0点，北京时间早上8点
 
 jobs:
   sync:
@@ -16,6 +16,7 @@ jobs:
         env:
           TEXTDB_KEY: ${{ secrets.TEXTDB_KEY }}
         run: |
-          curl -X POST 'https://textdb.online/update/' \
+          res=$(curl -L -X POST 'https://textdb.online/update/' \
             -F "key=${TEXTDB_KEY}" \
-            -F "value=@source_raw.json"
+            -F "value=@source_raw.json")
+          echo "textdb响应: $res"
