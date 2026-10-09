@@ -18,8 +18,8 @@ def main():
 
     # POST提交文本，不再拼在URL上，规避414
     payload = {
-        "key": key,
-        "value": content
+        "id": key,
+        "data": content
     }
     res = requests.post("https://textdb.online/update/", data=payload, timeout=60)
     print("textdb返回内容:", res.text)
