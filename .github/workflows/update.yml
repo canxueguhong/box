@@ -8,18 +8,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Fetch and modify config
+        run: |
+          curl -L "https://tvbox.xiaoy93.ccwu.cc" -o config.json
+          sed -i 's|https://raw.githubusercontent.com|https://ghfast.top/https://raw.githubusercontent.com|g' config.json
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install python dependencies
-        run: pip install requests
-
-      - name: Run sync script
+      - name: Push to TextDB
         env:
           TEXTDB_KEY: ${{ secrets.TEXTDB_KEY }}
-        run: python3 sync.py
+        run: |
+          curl -X POST "https://textdb.online/update/?key=${TEXTDB_KEY}" \
+            -H "Content-Type: text/plain;charset=utf-8" \
+            --data-binary @config.json
