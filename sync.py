@@ -7,6 +7,7 @@ def main():
     source_url = "https://tvbox.xiaoy93.ccwu.cc"
     resp = requests.get(source_url, timeout=30)
     resp.raise_for_status()
+    resp.encoding = 'utf-8'
     content = resp.text
 
     # 替换raw镜像地址
@@ -15,9 +16,12 @@ def main():
         "https://ghfast.top/https://raw.githubusercontent.com"
     )
 
-    # key放在url参数，body直接传文本
-    url = f"https://textdb.online/update/?key={key}"
-    res = requests.post(url, data=content, timeout=60)
+    # ✅ 用表单data字典，key和value，这是textdb网页端提交的标准格式
+    payload = {
+        "key": key,
+        "value": content
+    }
+    res = requests.post("https://textdb.online/update/", data=payload, timeout=60)
     print("textdb返回内容:", res.text)
 
 if __name__ == "__main__":
