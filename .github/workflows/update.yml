@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Fetch original source json
         run: |
-          curl -L "shturl.cc/1Ua3BfZgNNiB0e7Zkql8" -o source_raw.json
+          curl -L "https://tvbox.xiaoy93.ccwu.cc/" -o source_raw.json
 
       - name: Debug print key
         env:
