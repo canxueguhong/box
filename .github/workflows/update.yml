@@ -12,14 +12,17 @@ jobs:
         run: |
           curl -L "https://tvbox.xiaoy93.ccwu.cc" -o tvbox.json
           sed -i 's|https://raw.githubusercontent.com|https://ghfast.top/https://raw.githubusercontent.com|g' tvbox.json
+          cat tvbox.json
 
       - name: Upload to textdb
         run: |
-          curl -X POST https://textdb.online/api \
-          -H "Content-Type: application/json" \
-          -d @- <<EOF
-          {
-            "key": "${{ secrets.TEXTDB_KEY }}",
-            "data": "$(jq -R . tvbox.json)"
-          }
-          EOF
+          JSON_ESCAPED=$(jq -R . tvbox.json)
+          echo "Escaped content: $JSON_ESCAPED"
+          BODY=$(jq -n \
+            --arg k "${{ secrets.TEXTDB_KEY }}" \
+            --arg d "$JSON_ESCAPED" \
+            '{key: $k, data: $d}')
+          echo "RequestBody: $BODY"
+          curl -v -X POST "https://textdb.online/api" \
+            -H "Content-Type: application/json" \
+            -d "$BODY"
