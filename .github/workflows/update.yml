@@ -12,17 +12,11 @@ jobs:
         run: |
           curl -L "https://tvbox.xiaoy93.ccwu.cc/" -o source_raw.json
 
-      - name: Debug print key
-        env:
-          TEXTDB_KEY: ${{ secrets.TEXTDB_KEY }}
-        run: |
-          echo "Key value: |$TEXTDB_KEY|"
-
       - name: Upload to TextDB
         env:
           TEXTDB_KEY: ${{ secrets.TEXTDB_KEY }}
         run: |
           res=$(curl -L -X POST 'https://textdb.online/update/' \
-            -F "key=${TEXTDB_KEY}" \
+            -F "name=${TEXTDB_KEY}" \
             -F "data=@source_raw.json")
           echo "textdb响应: $res"
