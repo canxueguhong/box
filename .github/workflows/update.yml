@@ -1,22 +1,21 @@
-name: Sync TVBox Config to textdb
+name: Copy tvbox source to textdb
 on:
-  workflow_dispatch:
+  workflow_dispatch:   # 支持手动点按钮立即跑
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 0 * * *" # UTC时间，每天0点执行（对应国内早8点）
 
 jobs:
-  build:
+  sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch and modify config
+      - name: Fetch original source content
         run: |
-          curl -L "https://tvbox.xiaoy93.ccwu.cc" -o config.json
-          sed -i 's|https://raw.githubusercontent.com|https://ghfast.top/https://raw.githubusercontent.com|g' config.json
+          curl -L "shturl.cc/ECXIIZdIcnJE38Howbm" -o source_raw.json
 
-      - name: Push to TextDB
+      - name: Upload to textdb (simulate browser manual paste)
         env:
           TEXTDB_KEY: ${{ secrets.TEXTDB_KEY }}
         run: |
-          curl -X POST "https://textdb.online/update/?key=${TEXTDB_KEY}" \
-            -H "Content-Type: text/plain;charset=utf-8" \
-            --data-binary @config.json
+          curl -X POST 'https://textdb.online/update/' \
+            -F "key=${TEXTDB_KEY}" \
+            -F "value=@source_raw.json"
