@@ -17,6 +17,6 @@ jobs:
           TEXTDB_KEY: ${{ secrets.TEXTDB_KEY }}
         run: |
           res=$(curl -L -X POST 'https://textdb.online/update/' \
-            -F "name=${TEXTDB_KEY}" \
-            -F "data=@source_raw.json")
+          -d "key=${TEXTDB_KEY}" \
+          -d "value=@source_raw.json")
           echo "textdb响应: $res"
