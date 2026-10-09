@@ -1,22 +1,23 @@
 name: Copy tvbox source to textdb
 on:
-  workflow_dispatch:   # 手动运行
+  workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *" # UTC每天0点，北京时间早上8点
+    - cron: "0 0 * * *"
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch original source content
+      - name: Fetch original source json
         run: |
           curl -L "https://tvbox.xiaoy93.ccwu.cc/" -o source_raw.json
 
-      - name: Upload to textdb (simulate browser manual paste)
+      - name: Upload to TextDB
         env:
           TEXTDB_KEY: ${{ secrets.TEXTDB_KEY }}
         run: |
-          res=$(curl -L -X POST 'https://textdb.online/update/' \
-            -F "key=${TEXTDB_KEY}" \
-            -F "value=@source_raw.json")
+          CONTENT=$(cat source_raw.json)
+          # URL编码内容，GET提交
+          ENCODED=$(echo "$CONTENT" | jq -sRr @uri)
+          res=$(curl -L "https://textdb.online/update/?key=${TEXTDB_KEY}&value=${ENCODED}")
           echo "textdb响应: $res"
